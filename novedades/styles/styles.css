@@ -1,0 +1,236 @@
+:root{
+    --review-width:16em;
+    --color-texto:#FFFFFF;
+    --color-texto-alternativo:#00ff33ff;
+    --hover-color:#5599BB;
+    --color-fondo:#242530ff;
+}
+
+html{
+    box-sizing: border-box
+}
+
+body{
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'VT323', 'Roboto', sans-serif;
+    font-size:1em;
+    text-align: center;
+}
+
+
+.boton-atras:active, .boton-adelante:active{
+    animation: parpadeo 0.1s linear 3;
+}
+
+@keyframes parpadeo {
+    0% {background-color: var(--hover-color)}
+    50% {opacity:0}
+}
+
+
+
+.titulo{
+    display:inline;
+}
+
+.portada-highlight{
+    width:var(--review-width);
+}
+
+
+.caja-reviews{
+    height:16.4em;
+    width: var(--review-width);
+    margin:auto;
+    padding: auto 2em auto 2em;
+    overflow-y:scroll;
+    border-style:groove;
+    border-radius: 5%;
+    margin-top:1em;
+}
+
+
+.review{
+    margin: auto 1em auto 1em;
+    font-size: 1.2em;
+}
+
+
+.nombre-seccion{
+    text-align: center;
+}
+
+.contenedor-botones-y-titulo{
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 1fr;
+}
+
+.boton-atras{
+    grid-column-start: 1;
+    grid-column-end:2;
+}
+
+.titulo{
+    display:inline-block;    
+    grid-column-start: 2;
+    grid-column-end:5;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+
+.boton-adelante{ 
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+.boton-atras, .boton-adelante{
+    grid-row-start:2;
+    grid-row-end:3;
+    display:inline-block;
+    margin:auto;
+    background-color:var(--color-fondo);
+    color:var(--color-texto);    
+    border-style: none;
+    font-size: 3em;
+    width: 1.4em;
+    height: 1.4em;
+}
+
+
+.titulo{
+    font-size: 1.4em;
+}
+
+.review{
+    text-align: left;
+}
+
+.username{
+    color:var(--color-texto-alternativo);
+    font-style: italic;
+}
+
+@media (min-width:480px) and (max-width: 760px){
+
+    .portada-highlight{
+        width:calc(var(--review-width)*1.2);
+    }
+
+    .caja-reviews{
+        height:10.6em;
+    }
+
+    .caja-reviews{
+        height:13.8em;
+        width: calc(var(--review-width)*1.8);
+    }
+    
+}
+
+@media (min-width:761px) and (max-width: 1080px){
+    .portada-highlight{
+        width:calc(var(--review-width)*1.5);
+    }
+
+    .caja-reviews{
+        width:calc(var(--review-width)*1.8);
+        height: 13.8m;
+    }
+}
+
+
+@media (min-width:1081px){
+
+     
+    .boton-atras:hover, .boton-adelante:hover{
+        background-color:var(--hover-color);
+        transition: 0.5s;
+    }
+
+
+    .portada-highlight{
+        width:calc(var(--review-width)*1.5);
+    }
+
+    .caja-reviews{
+        width:calc(var(--review-width)*1.5);
+        border-radius: 0;
+    }
+
+    .nombre-seccion{
+        font-size: 2.5em;
+    }
+    .titulo{
+        font-size: 2.1em;
+
+    }
+
+    .boton-atras{
+        grid-column-start: 2;
+        grid-column-end:3;
+    }
+    
+    .titulo{
+        grid-column-start: 3;
+        grid-column-end:4;
+        grid-row-start:2;
+        grid-row-end:3;
+    }
+    
+    .boton-adelante{ 
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    
+    .boton-atras, .boton-adelante{
+        grid-row-start:2;
+        grid-row-end:3;
+        display:inline-block;
+        margin:auto;
+        background-color:var(--color-fondo);
+        border-style: none;        
+        color:var(--color-texto);    
+        font-size: 2.5em;
+        width: 1.9em;
+        height: 1.9em;
+    }
+    
+    .grid-portada-y-review{
+        display:grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(2, 12em);
+    }
+
+
+    .portada, .caja-reviews{
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .portada{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .caja-reviews{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin:0 auto;
+        width:80%;
+        height:100%;
+    }
+
+    .portada-highlight{
+        position:relative;
+        display: inline-block;
+        height:100%;
+        width:80%;
+    }
+
+    .review{
+        font-size: 1.1em;
+    }
+}

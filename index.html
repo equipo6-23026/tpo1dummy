@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <title>
+        SarasaDB
+    </title>
+</head>
+<body>
+
+
+    <header>
+        <div class="contenedor-hamburguesa">
+            <div class="contenedor-barras" id="boton-hamburguesa">
+                <i class="fa-solid fa-bars icono-menu"  id="icono-menu-abrir"></i>
+                <i class="fa-solid fa-xmark icono-menu icono-menu-oculto" id="icono-menu-cerrar"></i>
+            </div>
+    
+
+            <nav>
+                <div id="contenedor-enlaces" class="contenedor-enlaces contenedor-enlaces--oculto contenedor-enlaces--visualmenteoculto">
+                <ul class="enlaces" id="enlaces">
+                    <li><a class="opcion-menu" href="./noticias/noticias.html" target="iframe-contenido">Noticias</a></li>
+                    <li><a class="opcion-menu" href="./publica-tu-review/publica-tu-review.html" target="iframe-contenido">Publica tu review</a></li>
+                    <li><a class="opcion-menu" href="./acerca-de-nosotros/acerca-de-nosotros.html" target="iframe-contenido">Acerca de nosotros</a></li>
+                </ul>
+                </div>
+            </nav>
+         </div>
+
+        <a class="link-home" href="./novedades/novedades.html" target="iframe-contenido">
+            <img class="logotipo" src="assets/img/sarasa-db-logotipo.svg" alt="">
+             <img class="logo-small" src="assets/img/sarasa-db-logo2.svg" alt="">
+         </a>
+
+        <form action="./busquedas/busquedas.html" method="get" target="iframe-contenido" class="formulario-busqueda">
+            <input class="busqueda" id="search" type="text"placeholder=" Buscar juego"name="search"/>
+        </form>
+
+    </header>       <!-- FALTA H1 -->
+
+
+    <main>
+        <iframe name="iframe-contenido" id="iframe-contenido"src="./novedades/novedades.html"></iframe>       
+        <hr class="barra-espaciadora">
+    </main>
+
+    
+    <footer>
+        <p class="copyright">Derechos reservados sarasa corp.</p>
+        <div class="redes">
+            <a class="link-redes" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a class="link-redes" href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a class="link-redes" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>   
+    </footer>
+    <script src="./js/botonmenu.js"></script>
+    <script src="./js/busqueda.js"></script>
+</body>
+</html>

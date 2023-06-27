@@ -1,0 +1,267 @@
+:root{
+    --review-width:16em;
+    --color-texto:#FFFFFF;
+    --color-texto-alternativo:#00ff33ff;    
+    --hover-color:#5599BB;
+    --color-fondo:#242530ff;
+}
+
+html{
+    box-sizing: border-box
+}
+
+body{
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'VT323', 'Roboto', sans-serif;
+    font-size:1em
+}
+
+h2{
+    text-align: center;
+}
+
+.portada-highlight{
+    width:calc(var(--review-width)*1.2);
+    display: block;
+    margin: 2em auto 2em auto;
+
+}
+
+.reviews-titulo{
+    margin: 2em auto;
+    text-align: center;
+}
+
+.caja-reviews{
+    height:10.6em;
+    width: var(--review-width);
+    margin:auto;
+    padding: auto 2em auto 3em;
+    overflow-y:scroll;
+    border-style:groove;
+    border-radius: 0%;
+    margin-top:1em;
+
+
+}
+
+.username{
+    font-size:1.4em;
+    color:var(--color-texto-alternativo);
+    font-style: italic;
+}
+
+
+.review{
+    margin: 1em 1em auto 1em;
+    font-size: 1.2em;
+}
+
+
+.lista-resultados{
+    list-style-type: none;
+    padding:0;
+}
+
+.titulo-resultados{
+    font-size: 1.7em;
+    margin: 0 0 .5em 0;
+}
+
+.lista-resultados li{
+    margin: 1.5em 0;
+}
+
+.link-resultado{
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0 0 0 1em;
+    color: var(--hover-color);
+}
+
+#resultado-busqueda{
+    margin: 1em 0 0 0;
+}
+
+.precio-dolares, .precio-pesosar{
+    font-size: 1.2em;
+}
+
+
+
+@media (min-width:480px) and (max-width: 760px){
+    .titulo-resultados{
+        font-size: 1.9em;
+        margin: 0 0 .5em 1.5em;
+    }
+
+    .link-resultado{
+        text-decoration: none;
+        font-size: 1.9em;
+        margin: 0 0 0 5em;
+        color: var(--hover-color);
+    }
+
+    #resultado-busqueda{
+        margin: 1em 0 0 1em;
+    }
+
+
+    .caja-reviews{
+        height:13.8em;
+        width: calc(var(--review-width)*1.8);
+        margin:auto;
+        padding: auto 2em auto 2em;
+        overflow-y:scroll;
+        border-style:groove;
+        border-radius: 0%;
+        margin-top:1em;
+    }
+    
+    .review{
+        margin: 1em 1em auto 1em;
+        font-size: 1.2em;
+    }
+    
+}
+
+
+@media (min-width:761px) and (max-width: 1080px){ 
+
+    .titulo-resultados{
+        font-size: 2em;
+    }
+
+    .link-resultado{
+        text-decoration: none;
+        font-size: 2em;
+        margin-left:1em;
+        color: var(--hover-color);
+    }
+
+    #resultado-busqueda{
+        margin: 2em 0 0 12em;
+    }
+
+    .caja-reviews{
+        height:13.8em;
+        width: calc(var(--review-width)*1.8);
+        margin:auto;
+        padding: auto 2em auto 2em;
+        overflow-y:scroll;
+        border-style:groove;
+        border-radius: 0%;
+        margin-top:1em;
+    }
+    
+    .precio-dolares, .precio-pesosar{
+        text-align:center;
+    }
+
+    .review{
+        margin: 1em 1em auto 1em;
+        font-size: 1.2em;
+    }
+
+
+}
+
+
+@media (min-width:1081px){
+
+    h3{
+        margin-left: 40em;
+    }
+
+    .titulo-resultados{
+        font-size: 3em;
+        margin: 0 0 1em 3em;
+    }
+
+    .link-resultado{
+        text-decoration: none;
+        font-size: 2em;
+        margin: 2em 0 0 8em;
+        color: var(--hover-color);
+    }
+
+    .link-resultado:hover{
+        background-color: var(--hover-color);
+        color: var(--color-fondo);
+        transition: 0.5s;
+    }
+
+    #resultado-busqueda{
+        margin: 2em 0 0 11em;
+    }
+
+
+    .portada-highlight{
+        width:calc(var(--review-width)*1.5);
+    }
+
+    .caja-reviews{
+        width:calc(var(--review-width)*1.5);
+        border-radius: 0;
+    }
+
+    .contenedor-grid{
+        display:grid;
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: 5em 3em 3em 3em 20em;
+    }
+
+    .review-titulo{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .portada-highlight{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 6;
+        position: relative;
+        display:inline-block;        
+        height:auto;
+        width:95%;
+        margin:auto 1em auto 1em;
+    }
+
+    .precio-dolares{
+        margin-left: 1em;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .precio-pesosar{
+        margin-left: 1em;        
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .reviews-titulo{
+        margin: 1em 1em;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .caja-reviews{
+        display:block;
+        margin: 0 1em 0 1em;
+        height:95%;
+        width:95%;
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 6;
+
+    }
+}

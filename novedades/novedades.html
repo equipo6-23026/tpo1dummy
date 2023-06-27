@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>SarasaDB - Novedades</title>
+</head>
+<body>
+    <section class="destacados" name="destacados">
+        <h2 class="nombre-seccion">Destacados</h2>
+        <div class="contenedor-botones-y-titulo">
+            <button class="boton-atras" onclick="novedadesController(-1)"> <span class="flecha">&#60</span> </button>
+            <p class="titulo" id="titulo"></p>
+            <button class="boton-adelante" onclick="novedadesController(1)"> <span class="flecha">&#62</span> </button>
+        </div>
+        
+        <div class="grid-portada-y-review">
+            <a class="portada" href="#">
+                <img class="portada-highlight" src="" id="portada-highlight" alt="">
+            </a>
+            <div class="caja-reviews" id="caja-reviews">
+            </div>
+        </div>
+    </section>
+    <script src="../js/busqueda.js"></script>
+    <script src="./js/mostrarNovedades.js"></script>
+</body>
+</html>
