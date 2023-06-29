@@ -36,7 +36,7 @@ let formReview = `
           </label>
           <p><label>Formatos aceptados: jpg|jpeg|png|gif|bmp|svg </label></p>
           <div class="form-review-item">
-            <input type="url" id="image-url" placeholder="https://www.imageurl.com/example.jpg"/>
+            <input type="text" id="image-url" placeholder="https://www.imageurl.com/example.jpg"/>
           </div>
           <br>
 
