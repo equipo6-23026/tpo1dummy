@@ -10,7 +10,7 @@ const reviews = sessionStorage.getItem(reviewTitulo);
 let contenedor = document.getElementById('contenedor-review');
 window.addEventListener('load',()=>{
     const dolarizado = consultaDolar().then((c)=>{
-        let dolarizado = precio*parseFloat(c).toFixed(2);
+        let dolarizado = (precio*parseFloat(c)).toFixed(2);
         contenedor.innerHTML=`
         <div class="contenedor-grid" id="contenedor-grid">
         <h2 class="review-titulo">${reviewTitulo} </h2>
